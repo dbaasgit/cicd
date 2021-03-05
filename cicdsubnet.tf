@@ -1,5 +1,9 @@
 provider "aws" {
-   region     = "us-east-2"
+region = "eu-east-2"
+assume_role {
+role_arn = "arn:aws:iam::097184783241:role/ec2-IAMRole"
+session_name = "ec2-IAMRole"
+}
 }
 resource "aws_subnet" "newcicd" {
   vpc_id     =" vpc-d1c99cb9"
