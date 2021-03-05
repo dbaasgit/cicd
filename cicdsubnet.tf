@@ -1,4 +1,5 @@
 provider "aws" {
+  alias   = "eks_master"
   region  = "us-east-2"
 
   assume_role = [{
